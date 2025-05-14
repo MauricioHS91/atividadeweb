@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PessoaService{
-    private final PessoaRepository produtoRepository;
+public class ProdutoService{
+    private final ProdutoRepository produtoRepository;
 
     public ProdutoService(ProdutoRepository produtoRepository){
         this.produtoRepository = produtoRepository;
@@ -23,7 +23,7 @@ public class PessoaService{
         return produtoRepository.findById(id);
     }
 
-    public Pessoa salvarProduto(Produto produto){
+    public Produto salvarProduto(Produto produto){
         return produtoRepository.save(produto);
     }
 
